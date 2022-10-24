@@ -1,9 +1,9 @@
 #!/bin/bash
 
-APP_NAME="<service name>"
-RUN_PATH="<app run script?"
-SCREEN_NAME="<screen name>"
-APP_PORT=<app_port>
+APP_NAME="<SERVICE_NAME?"
+RUN_PATH="<RUN_SCRIPT_PATH>"
+SCREEN_NAME="<SCREEN_NAME?"
+APP_PORT=<SERVICE_PORT>
 
 function START {
    echo "Starting ${APP_NAME}..."
@@ -41,7 +41,7 @@ case "$1" in
     STOP
     START;;
   *)
-    echo "Usage: /etc/init.d/node-exporter {start|stop|restart}"
+    echo "Usage: $(realpath "$0") {start|stop|restart}"
     ;;
 esac
 
