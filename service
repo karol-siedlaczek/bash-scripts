@@ -1,0 +1,17 @@
+[Unit]
+Description=
+After=syslog.target network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=
+Group=
+ExecStart=
+SyslogIdentifier=
+Environment=
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
