@@ -1,8 +1,8 @@
 #!/bin/bash
 
-REPO_PATH="<repo>"
-REPO_TOKEN="<token>"
-TMP_DIR="/tmp/.ssh-config-${USER}.repo"
+REPO_PATH="<REPO_URL>"
+REPO_TOKEN="<OAUTH2_TOKEN>"
+TMP_DIR="/tmp/.ssh-config-${RANDOM}-${USER}.repo"
 
 [ -d $TMP_DIR ] && rm -rf $TMP_DIR
 
