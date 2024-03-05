@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://code.mendhak.com/keeagent-with-wsl/
 
 WEASEL_PATH="windows/path/to/weasel-pageant-1.4"
 
