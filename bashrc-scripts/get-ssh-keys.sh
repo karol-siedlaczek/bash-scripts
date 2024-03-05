@@ -2,7 +2,7 @@
 
 WEASEL_PATH="windows/path/to/weasel-pageant-1.4"
 
-echo -n "loading SSH keys from pageant... "
+echo -n "Loading SSH keys from pageant... "
 "$WEASEL_PATH/weasel-pageant" -k> /dev/null 2> /dev/null
 eval $("$WEASEL_PATH/weasel-pageant" -r -a "/tmp/.weasel-pageant-$USER-$RANDOM")> /dev/null 2> /dev/null
 sleep 1
