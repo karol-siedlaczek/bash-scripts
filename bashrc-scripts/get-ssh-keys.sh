@@ -9,7 +9,7 @@ sleep 1
 ssh_keys_loaded=$(ssh-add -l | grep -c SHA)
 
 if [[ $ssh_keys_loaded -gt 0 ]];  then
-    echo -e "Loaded $ssh_keys_loaded keys"
+    echo -e "loaded $ssh_keys_loaded keys"
 else
-    echo -e "Failed to load any key"
+    echo -e "failed to load any key"
 fi
