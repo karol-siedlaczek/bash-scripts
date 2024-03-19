@@ -30,8 +30,6 @@ fi
 
 REPOSITORY=$(sed -e 's/.*\///g' <<< $REPOSITORY)
 DEST="$REPOPATH/${DIRECTORY^}/$REPOSITORY"
-#echo "git clone --branch $BRANCH $CMD $DEST --progress"
 
 git clone --branch $BRANCH $CMD $DEST --progress
-
 echo -n $DEST | xclip -in -selection clipboard
