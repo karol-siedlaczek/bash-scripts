@@ -21,6 +21,7 @@ case "$1" in
     gitlab-pl)
         CMD=git@github.net.pl:$REPOSITORY.git
         if [[ -Z $BRANCH ]]; then BRANCH="main"; fi
+        ;;
     *)
         show_usage
         ;;
