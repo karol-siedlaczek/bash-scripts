@@ -5,7 +5,7 @@ DIRECTORY=$3
 BRANCH=$4
 
 function show_usage() {
-    echo -e "Usage: git-clone {gerrit|github|gitlab-p4} <repository> <directory> [<branch>|main]" >&2
+    echo -e "Usage: git-clone {gerrit|github|gitlab-p4|gitlab} <repository> <directory> [<branch>|main]" >&2
     exit 1
 }
 
@@ -21,6 +21,10 @@ case "$1" in
     gitlab-pl)
         CMD=git@github.net.pl:$REPOSITORY.git
         if [[ -z $BRANCH ]]; then BRANCH="main"; fi
+        ;;
+    gitlab)
+        CMD=git@drm-gitlab.redlabs.pl:$REPOSITORY.git
+        if [[ -z $BRANCH ]]; then BRANCH="master"; fi
         ;;
     *)
         show_usage
