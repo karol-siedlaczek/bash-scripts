@@ -41,5 +41,12 @@ DEST="$REPOPATH/${DIRECTORY^}/$REPOSITORY"
 #echo "git clone --branch $BRANCH $CMD $DEST --progress"
 
 git clone --branch $BRANCH $CMD $DEST --progress
+git config -f $DEST/.git/config user.name "Karol Siedlaczek"
+
+if [[ $1 -eq "gitlab" || $1 -eq "gerrit" || $1 -eq "gitlab-p4" ]]; then
+    git config -f $DEST/.git/config user.email "karol.siedlaczek@redge.com"
+else
+    git config -f $DEST/.git/config user.email "karol@siedlaczek.com.pl"
+fi
 
 echo -n $DEST | xclip -in -selection clipboard
