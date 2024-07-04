@@ -36,9 +36,9 @@ then
     show_usage
 fi
 
-#REPOSITORY=$(sed -e 's/.*\///g' <<< $REPOSITORY) # To upper case
-DEST="$REPOPATH/${DIRECTORY^}/$REPOSITORY"
-#echo "git clone --branch $BRANCH $CMD $DEST --progress"
+REPOSITORY=$(sed -e 's/.*\///g' <<< $REPOSITORY) # To upper case
+# DEST="$REPOPATH/${DIRECTORY^}/$REPOSITORY" # To upper case
+DEST="$REPOPATH/$DIRECTORY/$REPOSITORY"
 
 git clone --branch $BRANCH $CMD $DEST --progress
 git config -f $DEST/.git/config user.name "Karol Siedlaczek"
