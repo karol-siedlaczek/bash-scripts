@@ -36,7 +36,7 @@ then
     show_usage
 fi
 
-REPOSITORY=$(sed -e 's/.*\///g' <<< $REPOSITORY)
+#REPOSITORY=$(sed -e 's/.*\///g' <<< $REPOSITORY) # To upper case
 DEST="$REPOPATH/${DIRECTORY^}/$REPOSITORY"
 #echo "git clone --branch $BRANCH $CMD $DEST --progress"
 
