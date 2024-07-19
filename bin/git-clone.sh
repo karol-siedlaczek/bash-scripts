@@ -41,6 +41,12 @@ REPOSITORY=$(sed -e 's/.*\///g' <<< $REPOSITORY) # To upper case
 DEST="$REPOPATH/$DIRECTORY/$REPOSITORY"
 
 git clone --branch $BRANCH $CMD $DEST --progress
+
+if [[ $? -gt 0 ]]; then
+    echo "ERROR: failed to clone $CMD"
+    exit 1
+fi
+
 git config -f $DEST/.git/config user.name "Karol Siedlaczek"
 
 if [[ $1 -eq "gitlab" || $1 -eq "gerrit" || $1 -eq "gitlab-p4" ]]; then
