@@ -2,6 +2,7 @@
 
 REPO_PATH="<REPO_URL>"
 REPO_TOKEN="<OAUTH2_TOKEN>"
+WINDOWS_USER="<WIN_USER>"
 
 tmp_dir="/tmp/.ssh-config-${RANDOM}-${USER}.repo"
 
@@ -22,3 +23,6 @@ else
         rm -rf $tmp_dir
         echo "success"
 fi
+
+mkdir -p /mnt/c/Users/$WINDOWS_USER/.ssh
+cp ~/.ssh/config /mnt/c/Users/$WINDOWS_USER/.ssh/config
