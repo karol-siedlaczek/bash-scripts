@@ -21,8 +21,8 @@ else
         chmod 700 ~/.ssh/config.d && chmod 600 ~/.ssh/config ~/.ssh/config.d/*
         dos2unix --quiet ~/.ssh/config
         rm -rf $tmp_dir
+        mkdir -p /mnt/c/Users/$WINDOWS_USER/.ssh
+        cp ~/.ssh/config /mnt/c/Users/$WINDOWS_USER/.ssh/config
         echo "success"
 fi
 
-mkdir -p /mnt/c/Users/$WINDOWS_USER/.ssh
-cp ~/.ssh/config /mnt/c/Users/$WINDOWS_USER/.ssh/config
