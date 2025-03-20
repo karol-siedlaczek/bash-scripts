@@ -52,7 +52,7 @@ if [[ $1 -eq "gitlab" || $1 -eq "gerrit" || $1 -eq "gitlab-p4" ]]; then
     git config -f $DEST/.git/config user.email "karol.siedlaczek@redge.com"
 else
     git config -f $DEST/.git/config user.name "karol-siedlaczek"
-    git config -f $DEST/.git/config user.email "karol@siedlaczek.com.pl"
+    git config -f $DEST/.git/config user.email "karolsiedlaczek@wp.pl"
 fi
 
 echo -n $DEST | xclip -in -selection clipboard
