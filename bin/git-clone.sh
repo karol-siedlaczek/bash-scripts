@@ -47,11 +47,11 @@ if [[ $? -gt 0 ]]; then
     exit 1
 fi
 
-git config -f $DEST/.git/config user.name "Karol Siedlaczek"
-
 if [[ $1 -eq "gitlab" || $1 -eq "gerrit" || $1 -eq "gitlab-p4" ]]; then
+    git config -f $DEST/.git/config user.name "Karol Siedlaczek"
     git config -f $DEST/.git/config user.email "karol.siedlaczek@redge.com"
 else
+    git config -f $DEST/.git/config user.name "karol-siedlaczek"
     git config -f $DEST/.git/config user.email "karol@siedlaczek.com.pl"
 fi
 
